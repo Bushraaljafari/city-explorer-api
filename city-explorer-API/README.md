@@ -53,13 +53,24 @@ express.js
 
 
 
-1. Name of feature: ________________________________
+1. Name of feature:Weather (placeholder)
 
-2. Estimate of time needed to complete: _____
+2. Estimate of time needed to complete: _1 hour____
 
-3. Start time: _____
+3. Start time: 6_____
 
-4. Finish time: _____
+4. Finish time: __8:50___
 
-5. Actual time needed to complete: _____
+5. Actual time needed to complete: ___2:50 houre__
 
+
+
+1. Name of feature:Errors 
+
+2. Estimate of time needed to complete: _10 min____
+
+3. Start time: 8:50_____
+
+4. Finish time: __9:30___
+
+5. Actual time needed to complete: __40 min__
