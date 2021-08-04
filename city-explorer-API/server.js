@@ -6,9 +6,11 @@ const axios = require('axios');
 const cors=require('cors');
 require('dotenv').config();
 const PORT = process.env.PORT;
-const WEATHER_API_KEY=process.env.WEATHER_API_KEY; 
-const MOVIE_API_KEY=process.env.MOVIE_API_KEY;
+//const WEATHER_API_KEY=process.env.WEATHER_API_KEY; 
+//const MOVIE_API_KEY=process.env.MOVIE_API_KEY;
 app.use(cors());
+
+
 app.get('/',(req,res)=>{
     res.send('hello');
 });
@@ -51,10 +53,14 @@ class Forecast{
     }
 }*/
 //******************** */
+const gettingWeather = require('./controller/Forecast.controller');
+const gettingMovies = require('./controller/Movies.controller');
+
+
 app.get('/weather',gettingWeather)
 app.get('/movies',gettingMovies)
 //--------
-function gettingWeather(req,res){
+/*function gettingWeather(req,res){
     let {lat,lon}=req.query;
     let weathUrlReq=`https://api.weatherbit.io/v2.0/forecast/daily?key=${WEATHER_API_KEY}&lat=${lat}&lon=${lon}`
      //await
@@ -79,7 +85,7 @@ function gettingMovies(req,res){
     .then(results=>{
         let value=results.data.data[0];
         let movies=new Movies (value);;
-        response.send(movies);
+        res.send(movies);
     })
     .catch(err=>{
         res.status(500).send(` we have error on getting adata ${err}`)
@@ -112,7 +118,7 @@ class Forecast{
             this.released_on=item.release_date;
         }
     }
-
+*/
 
 //---2
 /////----------???????????
