@@ -1,13 +1,13 @@
 const axios = require('axios');
-
-const MOVIE_API_KEY=process.env.MOVIE_API_KEY;
+require('dotenv').config();
+const MOVIE_API_KEY2=process.env.MOVIE_API_KEY;
 const Movies = require('../models/Movies.model');
 
 
 
 function gettingMovies(req,res){
     let reqMovies=req.query
-    let moviesulr=`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${reqMovies}`
+    let moviesulr=`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY2}&query=${reqMovies}`
    // await 
    axios.get(moviesulr)
     .then(results=>{
