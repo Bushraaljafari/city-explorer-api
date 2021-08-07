@@ -2,7 +2,7 @@
 const express =require ('express');
 const app =express();
 //const weatherData=require('./data/weather.json');
-const axios = require('axios');
+//const axios = require('axios');
 const cors=require('cors');
 require('dotenv').config();
 const PORT = process.env.PORT;
